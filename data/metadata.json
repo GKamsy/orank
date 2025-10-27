@@ -1,0 +1,7 @@
+{
+  "name": "AI Research Grant",
+  "description": "Funding AI research in decentralized governance",
+  "researcher": "0xd9a2872f459484d47acb0ffa381d7024bd05d31b",
+  "amount": "1.0",
+  "tranches": ["0.5", "0.5"]
+}
