@@ -16,6 +16,7 @@ npm shrinkwrap
 
 *Run the following commands on your terminal (shell) to set up the project*
 ```
+node generate-voters.js
 npx hardhat run index.ts --network sepolia
 
 
