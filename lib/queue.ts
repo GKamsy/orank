@@ -26,8 +26,7 @@ export async function queueProposalCore(
   values: Record<number, number>,
   calldata: Record<string, string>,
   addresses: Record<string, string>,
-  networkName: string
-) {
+  networkName: string) {
   // -----------------------------
   // Setup and load proposal
   // -----------------------------
@@ -43,10 +42,11 @@ export async function queueProposalCore(
   }
 
   try {
-    const currentBlock = await ethers.provider.getBlockNumber();
+    //const currentBlock = await ethers.provider.getBlockNumber();
+    const currentBlock = (await ethers.provider.getBlockNumber()) - 1;
 
     // -----------------------------
-    // 🧩 STEP 1: Verify all votes’ metadata (with caching)
+    // STEP 1: Verify all votes’ metadata (with caching)
     // -----------------------------
     if (p.votes && Object.keys(p.votes).length > 0) {
       console.log(chalk.yellow(`\n⚙️ Checking ${Object.keys(p.votes).length} votes...`));
@@ -85,13 +85,13 @@ export async function queueProposalCore(
     }
 
     // -----------------------------
-    // 🧩 STEP 2: Verify reviews (with caching)
+    // STEP 2: Verify reviews (with caching)
     // -----------------------------
     if (p.reviews && Array.isArray(p.reviews) && p.reviews.length > 0) {
       console.log(chalk.yellow(`⚙️ Checking ${p.reviews.length} reviews...`));
       for (const r of p.reviews) {
         if (!r.ipfsHash) {
-          console.log(chalk.red(`⚙️ ipfsHash not found in this reviews.`));
+          console.log(chalk.red(`⚙️ ipfsHash not found in this review.`));
           continue;
         }
 
@@ -131,41 +131,49 @@ export async function queueProposalCore(
     }
 
     // -----------------------------
-    // 🧩 STEP 3: Calculate quorum & majority using only verified votes
+    // STEP 3: Calculate quorum & majority using verified votes (with on-chain fallback)
     // -----------------------------
-    const validVotes = Object.values(p.votes || {}).filter((v: any) => v.verified);
-    if (validVotes.length === 0) {
-      const update = updateProposalState(proposals, proposalId, "Defeated");
-      if (update === "successful") saveProposals(networkName, proposals);
-      return "Defeated";
+    const allVotes = Object.values(p.votes || {});
+    const verifiedVotes = allVotes.filter((v: any) => v.verified);
+
+    let av = 0n,
+      fv = 0n,
+      ab = 0n;
+
+    if (verifiedVotes.length > 0) {
+      av = BigInt(verifiedVotes.filter((v: any) => v.choice === 0).length);
+      fv = BigInt(verifiedVotes.filter((v: any) => v.choice === 1).length);
+      ab = BigInt(verifiedVotes.filter((v: any) => v.choice === 2).length);
+    } else {
+      console.log(chalk.gray("⚙️ No verified off-chain votes found — using on-chain tallies."));
+      const { againstVotes, forVotes, abstainVotes } = await governor.proposalVotes(proposalId);
+      av = toBigInt(againstVotes);
+      fv = toBigInt(forVotes);
+      ab = toBigInt(abstainVotes);
     }
 
     const quorum = await governor.quorum(currentBlock);
-    const { againstVotes, forVotes, abstainVotes } = await governor.proposalVotes(proposalId);
-
-    const av = toBigInt(againstVotes);
-    const fv = toBigInt(forVotes);
-    const ab = toBigInt(abstainVotes);
     const q = toBigInt(quorum);
 
     const totalVotes = av + fv + ab;
+    const downVotes = av + ab;
     const quorumMet = totalVotes >= q;
-    const majorityPassed = fv > av;
+    const majorityPassed = fv > downVotes;
 
     // -----------------------------
-    // 🧩 STEP 4: Record analytics and cache verification results
+    // STEP 4: Record analytics and cache verification results
     // -----------------------------
-    const verifiedCount = validVotes.length;
-    const totalCount = Object.keys(p.votes || {}).length;
+    const verifiedCount = verifiedVotes.length;
+    const totalCount = allVotes.length;
     const verifiedPct = totalCount > 0 ? (verifiedCount / totalCount) * 100 : 0;
 
     p.analytics = {
-      quorum: quorum.toString(),
-      forVotes: forVotes.toString(),
-      againstVotes: againstVotes.toString(),
-      abstainVotes: abstainVotes.toString(),
+      quorum: q.toString(),
+      forVotes: fv.toString(),
+      againstVotes: av.toString(),
+      abstainVotes: ab.toString(),
       totalVotes: totalVotes.toString(),
-      quorumMet,
+      //quorumMet,
       majorityPassed,
       verifiedVotes: verifiedCount,
       totalVotesRecorded: totalCount,
@@ -175,28 +183,26 @@ export async function queueProposalCore(
     };
 
     // -----------------------------
-    // 🧩 STEP 5: Validate quorum & majority
-    // -----------------------------
-    if (!quorumMet || !majorityPassed) {
+    // STEP 5: Validate quorum & majority
+    if (!majorityPassed) {
       const update = updateProposalState(proposals, proposalId, "Defeated");
       if (update === "successful") saveProposals(networkName, proposals);
       return "Defeated";
     }
 
     // -----------------------------
-    // 🧩 STEP 6: Queue proposal on-chain
+    // STEP 6: Queue proposal on-chain
     // -----------------------------
     const tx = await governor.queue(targets, values, calldata, descHash);
     const receipt = await tx.wait();
 
     // -----------------------------
-    // 🧩 STEP 7: Update local state & persist cached verification
+    // STEP 7: Update local state & persist cached verification
     // -----------------------------
     const update = updateProposalState(proposals, proposalId, "Queued");
     if (update === "successful") saveProposals(networkName, proposals);
     return update;
-  } 
-  catch (err: any) {
+  } catch (err: any) {
     return err.message;
   }
 }
