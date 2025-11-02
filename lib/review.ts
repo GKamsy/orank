@@ -67,12 +67,18 @@ export async function reviewProposalCore(
     reviewer, rating, feedback, ipfsHash: cid, txHash,
     timestamp: new Date().toISOString(),
   };
-
+  
   if (!p.reviews) p.reviews = [];
   p.reviews.push(review);
-  p.averageScore = (
-    p.reviews.reduce((acc, r) => acc + r.rating, 0) / p.reviews.length
-  ).toFixed(2);
+
+  // Compute safe numeric average and store as a Number rounded to 2 decimals
+  const sum = p.reviews.reduce((acc, r) => {
+    const rating = Number(r?.rating);            // coerce to number
+    return acc + (Number.isFinite(rating) ? rating : 0); // ignore invalid ratings
+  }, 0);
+
+  const avgRaw = p.reviews.length ? (sum / p.reviews.length) : 0;
+  p.averageScore = avgRaw.toFixed(2);
 
   saveProposals(networkName, proposals);
   return "successful";
