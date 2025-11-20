@@ -8,7 +8,16 @@ DAO governance often lacks verifiable ranking and transparent verification mecha
 **Prequisties**
 
 Before doing anything else, make sure that you have the following:
+```
+PUBLIC_KEY=your_wallet_address
+PRIVATE_KEY=your_private_key
+SEPOLIA_URL=https://eth-sepolia.g.alchemy.com/v2/your_project_ID
+VOTER_KEYS=generated_for_testing
 
+PINATA_API_KEY=your_pinata_api_key
+PINATA_SECRET_API_KEY=your_pinata_secret_api_key
+IPFS_GATEWAY=https://your_pinata_user_name.mypinata.cloud/ipfs/
+```
     
 
 **Installation**
