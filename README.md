@@ -5,6 +5,7 @@ This is a blockchain-based governance ranking protocol built with Hardhat, Ether
 
 DAO governance often lacks verifiable ranking and transparent verification mechanisms. Voting systems are frequently off-chain or opaque. ORank addresses this by providing **on-chain voting** with verification logic, **automatic ranking** via proposal queue, and immutable **result tracking**. I can proudly assure you that the project can be easily integrated into the education and research systems.
 
+
 **Prequisties**
 
 Before doing anything else, make sure that you have the following:
