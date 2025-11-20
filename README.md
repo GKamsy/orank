@@ -10,13 +10,11 @@ DAO governance often lacks verifiable ranking and transparent verification mecha
 ```
 
 **Prequisties**
-
 Before doing anything else, make sure that you have the following:
 
     
 
 **Installation**
-
 *Run the following commands on your terminal (shell) to install this project*
 ```
 git clone https://github.com/GKamsy/orank.git
