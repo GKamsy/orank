@@ -1,15 +1,11 @@
 # ORANK Project
 
-This is a blockchain-based governance ranking protocol built with Hardhat, Ethers.js, and TypeScript. It provides a foundation for DAOs to automate ranking, verify proposal outcomes, and maintain faithful governance records on the EVM chain. This ensures transparent proposal evaluation, verifiable voting, and on-chain accountability.
+This is a blockchain-based governance ranking protocol built with Hardhat, Ethers.js, and TypeScript. It provides a foundation for DAOs to automate ranking, verify proposal outcomes, and maintain trustworthy governance records on the EVM chain. This ensures transparent proposal evaluation, verifiable voting, and on-chain accountability.
 
-**Installation**
+**Prequisties**
 
 Before doing anything else, make sure that you have the following:
-    -
-    -
-    -
-    -
-    -
+
     
 
 **Installation**
