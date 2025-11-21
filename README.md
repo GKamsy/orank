@@ -6,16 +6,11 @@ This is a blockchain-based governance ranking protocol built with Hardhat, Ether
 DAO governance often lacks verifiable ranking and transparent verification mechanisms. Voting systems are frequently off-chain or opaque. ORank addresses this by providing **on-chain voting** with verification logic, **automatic ranking** via proposal queue, and immutable **result tracking**. I can proudly assure you that the project can be easily integrated into the education and research systems.
 
 
-
 # Prequisites
 **Before doing anything else, make sure that you have the following:**
-
- 1. MetaMask wallet from https://metamask.io for storing coins.
-
- 2. Router address from https://www.alchemy.com for project identification.
-
- 3. IPFS account from https://app.pinata.cloud for uploading data.
-
+1. MetaMask wallet from https://metamask.io for storing coins.
+2. Router address from https://www.alchemy.com for project identification.
+3. IPFS account from https://app.pinata.cloud for uploading data.
 
 
 **This will enable you to have the following:**
@@ -40,14 +35,14 @@ npm shrinkwrap
 
 # Environmental Setup
 **Use the following websites to claim faucets for testing:**
-
 1. https://cloud.google.com/application/web3/faucet/ethereum/sepolia
 2. https://faucet.metana.io
 3. https://www.alchemy.com/faucets/ethereum-sepolia
 
-**Run the following commands on your terminal (shell) to set up the project.** You are supposed to 
+**Run the following commands on your terminal (shell) to set up the project.** You must have at least 0.2 SepoliaETH in your MetaMask wallet.
 ```
 node generate-voters.js
+node fund-voters.js
 npx hardhat run index.ts --network sepolia
 
 
