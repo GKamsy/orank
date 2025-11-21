@@ -7,37 +7,35 @@ DAO governance often lacks verifiable ranking and transparent verification mecha
 
 
 
-**Prequisties**
+# Prequisties
+**Before doing anything else, make sure that you have the following:**
 
-*Before doing anything else, make sure that you have the following:*
+ 1. MetaMask wallet from https://metamask.io for storing coins.
 
-1. MetaMask wallet from https://metamask.io for storing coins.
+ 2. Router address from https://eth-sepolia.g.alchemy.com for project identification.
 
-2. Router address from https://eth-sepolia.g.alchemy.com for project identification.
-
-3. IPFS account from https://app.pinata.cloud for uploading data.
-
-
-
-*This will enable you to have the following:*
-
-a. PUBLIC KEY: Your wallet address from MetaMask wallet.
-
-b. PRIVATE KEY: Your wallet private key from MetaMask wallet.
-
-c. PROJECT URL: Your project address from the router address.
-
-d. IPFS API KEY: Your IPFS API key from PINATA.
-
-e. IPFS SECRET KEY: Your IPFS secret API key from PINATA.
-
-f. IPFS GATEWAY: Your IPFS user_name.mypinata.cloud/ipfs from PINATA.
+ 3. IPFS account from https://app.pinata.cloud for uploading data.
 
 
 
-**Installation**
+**This will enable you to have the following:**
 
-*Run the following commands on your terminal (shell) to install this project*
+ a. PUBLIC KEY: Your wallet address from MetaMask wallet.
+
+ b. PRIVATE KEY: Your wallet private key from MetaMask wallet.
+
+ c. PROJECT URL: Your project address from the router address.
+
+ d. IPFS API KEY: Your IPFS API key from PINATA.
+
+ e. IPFS SECRET KEY: Your IPFS secret API key from PINATA.
+
+ f. IPFS GATEWAY: Your IPFS user_name.mypinata.cloud/ipfs from PINATA.
+
+
+
+# Installation
+**Run the following commands on your terminal (shell) to install this project**
 ```
 git clone https://github.com/GKamsy/orank.git
 cd orank
@@ -47,9 +45,9 @@ npx hardhat compile
 npm shrinkwrap
 ```
 
-**Environmental Setup**
+# Environmental Setup
 
-*Run the following commands on your terminal (shell) to set up the project*
+**Run the following commands on your terminal (shell) to set up the project**
 ```
 node generate-voters.js
 npx hardhat run index.ts --network sepolia
