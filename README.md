@@ -39,7 +39,7 @@ npm shrinkwrap
 2. https://faucet.metana.io
 3. https://www.alchemy.com/faucets/ethereum-sepolia
 
-**Run the following commands on your terminal (shell) to set up the project.** You must have at least 0.2 SepoliaETH in your MetaMask wallet.
+**Run the following commands on your terminal (shell) to set up the project. You must have at least 0.2 SepoliaETH in your MetaMask wallet.**
 ```
 node generate-voters.js
 node fund-voters.js
