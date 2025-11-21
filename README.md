@@ -7,12 +7,12 @@ DAO governance often lacks verifiable ranking and transparent verification mecha
 
 
 
-# Prequisties
+# Prequisites
 **Before doing anything else, make sure that you have the following:**
 
  1. MetaMask wallet from https://metamask.io for storing coins.
 
- 2. Router address from https://eth-sepolia.g.alchemy.com for project identification.
+ 2. Router address from https://www.alchemy.com for project identification.
 
  3. IPFS account from https://app.pinata.cloud for uploading data.
 
@@ -20,17 +20,17 @@ DAO governance often lacks verifiable ranking and transparent verification mecha
 
 **This will enable you to have the following:**
 
- a. PUBLIC KEY: Your wallet address from MetaMask wallet.
+ 1. PUBLIC KEY: Your wallet address from the MetaMask wallet.
 
- b. PRIVATE KEY: Your wallet private key from MetaMask wallet.
+ 2. PRIVATE KEY: Your wallet private key from the MetaMask wallet.
 
- c. PROJECT URL: Your project address from the router address.
+ 3. PROJECT URL: Your Alchemy project address.
 
- d. IPFS API KEY: Your IPFS API key from PINATA.
+ 4. IPFS API KEY: Your PINATA API key.
 
- e. IPFS SECRET KEY: Your IPFS secret API key from PINATA.
+ 5. IPFS SECRET KEY: Your PINATA secret API key.
 
- f. IPFS GATEWAY: Your IPFS user_name.mypinata.cloud/ipfs from PINATA.
+ 6. IPFS GATEWAY: Your PINATA user_name.mypinata.cloud/ipfs.
 
 
 
