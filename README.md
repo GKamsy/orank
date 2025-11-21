@@ -23,8 +23,9 @@ DAO governance often lacks verifiable ranking and transparent verification mecha
 
 
 # Installation
-**Run the following commands on your terminal (shell) to install this project**
+**Run the following commands on your terminal/shell to install this project (Press Ctr + Alt + T to open the terminal):**
 ```
+sudo apt-get install nodejs npm
 git clone https://github.com/GKamsy/orank.git
 cd orank
 npm install --save-dev $(cat dev-dependencies.txt)
