@@ -19,19 +19,12 @@ DAO governance often lacks verifiable ranking and transparent verification mecha
 
 
 **This will enable you to have the following:**
-
- 1. PUBLIC KEY: Your wallet address from the MetaMask wallet.
-
- 2. PRIVATE KEY: Your wallet private key from the MetaMask wallet.
-
- 3. PROJECT URL: Your Alchemy project address.
-
- 4. IPFS API KEY: Your PINATA API key.
-
- 5. IPFS SECRET KEY: Your PINATA secret API key.
-
- 6. IPFS GATEWAY: Your PINATA user_name.mypinata.cloud/ipfs.
-
+1. PUBLIC KEY: Your wallet address from the MetaMask wallet.
+2. PRIVATE KEY: Your wallet private key from the MetaMask wallet.
+3. PROJECT URL: Your Alchemy project address.
+4. IPFS API KEY: Your PINATA API key.
+5. IPFS SECRET KEY: Your PINATA secret API key.
+6. IPFS GATEWAY: Your PINATA private gateway.
 
 
 # Installation
@@ -46,8 +39,13 @@ npm shrinkwrap
 ```
 
 # Environmental Setup
+**Use the following websites to claim faucets for testing:**
 
-**Run the following commands on your terminal (shell) to set up the project**
+1. https://cloud.google.com/application/web3/faucet/ethereum/sepolia
+2. https://faucet.metana.io
+3. https://www.alchemy.com/faucets/ethereum-sepolia
+
+**Run the following commands on your terminal (shell) to set up the project.** You are supposed to 
 ```
 node generate-voters.js
 npx hardhat run index.ts --network sepolia
