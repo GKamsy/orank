@@ -27,7 +27,8 @@ DAO governance often lacks verifiable ranking and transparent verification mecha
 **Open your terminal/shell (Press Ctr + Alt + T) and run the following commands:**
 1. *To install  Node.js and npm:*
 ```
-sudo apt-get install nodejs npm
+sudo apt-get install nodejs
+sudo apt-get install npm
 ```
 
 2. *To install the project:*
