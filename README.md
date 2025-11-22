@@ -24,7 +24,7 @@ DAO governance often lacks verifiable ranking and transparent verification mecha
 
 
 # 3. Installation
-**Open your terminal/shell (Press Ctr + Alt + T to open the terminal) and run the following commands:**
+**Open your terminal/shell (Press Ctr + Alt + T) and run the following commands:**
 1. *To install  Node.js and npm:*
 ```
 sudo apt-get install nodejs npm
@@ -54,7 +54,7 @@ npm shrinkwrap
 2. https://faucet.metana.io
 3. https://www.alchemy.com/faucets/ethereum-sepolia
 
-**B. Run the command below to open the .env file:**
+**B. Run the command below to open the .env file for editing:**
 ```
 mousepad .env      # (You may use any text editor)
 ```
