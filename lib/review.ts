@@ -34,9 +34,9 @@ export async function reviewProposalCore(
   const onChainState = await getProposalState(governor, proposalId);
 
   if (onChainState === "Pending") return onChainState;
-  if (onChainState !== "Active") {
+  if (onChainState !== "Active" || feedback === "" ) {
     const update = updateProposalState(proposals, proposalId, onChainState);
-    if (update === "successful" || feedback === "" ) saveProposals(networkName, proposals);
+    if (update === "successful") saveProposals(networkName, proposals);
     return `Proposal is in a ${onChainState} state`;
   }
 
