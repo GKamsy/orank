@@ -4,5 +4,5 @@ prettier@3.6.2
 axios@1.12.2
 dotenv@17.2.2
 inquirer@12.9.6
-chalk
+chalk@4
 typescript
