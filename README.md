@@ -1,20 +1,20 @@
 # ORANK Project  
 by Goodwell Kamwendo
  
- # 1. Overview
+ # PART 1: Overview
 
 This is a blockchain-based governance ranking protocol built with Hardhat, Ethers.js, and TypeScript. It provides a foundation for DAOs to automate ranking, verify proposal outcomes, and maintain trustworthy governance records on the EVM chain. This ensures transparent proposal evaluation, verifiable voting, and on-chain accountability.
 
 DAO governance often lacks verifiable ranking and transparent verification mechanisms. Voting systems are frequently off-chain or opaque. ORank addresses this by providing **on-chain voting** with verification logic, **automatic ranking** via proposal queue, and immutable **result tracking**. I can proudly assure you that the project can be easily integrated into the education and research systems.
 
 
-# 2. Prequisites
+# PART 2: Prerequisites
 **A. Before doing anything else, make sure that you have the following:**
 1. MetaMask wallet from https://metamask.io for storing coins.
 2. Router address from https://www.alchemy.com for project identification.
 3. IPFS account from https://app.pinata.cloud for uploading data.
 
-**B. This will enable you to have the following:**
+**B: This will enable you to have the following:**
 1. PUBLIC KEY: Your wallet address from the MetaMask wallet.
 2. PRIVATE KEY: Your wallet private key from the MetaMask wallet.
 3. PROJECT URL: Your Alchemy project address.
@@ -23,7 +23,7 @@ DAO governance often lacks verifiable ranking and transparent verification mecha
 6. IPFS GATEWAY: Your PINATA private gateway.
 
 
-# 3. Installation
+# PART 3: Installation
 **Open your terminal/shell (Press Ctr + Alt + T) and run the following commands:**
 1. *To install  Node.js and npm:*
 ```
@@ -48,7 +48,7 @@ npx hardhat compile
 npm shrinkwrap
 ```
 
-# 4. Environmental Setup
+# PART 4: Environmental Setup
 **A. Use the following websites to claim faucets for testing (make sure to collect more than 0.2 SepoliaETH in your MetaMask wallet):**
 1. https://cloud.google.com/application/web3/faucet/ethereum/sepolia
 2. https://faucet.metana.io
@@ -91,13 +91,13 @@ IPFS_GATEWAY=https://web3tester.mypinata.cloud/ipfs/
 
 ```
 
-**E. Run the following commands to set up the voters and fund them:**
+**E. Run the following commands to set up the voters and then fund them:**
 ```
 node generate-voters.js
 node fund-voters.js
 ```
 
-# 5. Running the program
+# PART 5: Running the program
 **Run the command below to start the project:**
 ```
 npx hardhat run index.ts --network sepolia
