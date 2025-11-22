@@ -48,7 +48,7 @@ npx hardhat compile
 npm shrinkwrap
 ```
 
-# Environmental Setup
+# 4. Environmental Setup
 **A. Use the following websites to claim faucets for testing (make sure to collect more than 0.2 SepoliaETH in your MetaMask wallet):**
 1. https://cloud.google.com/application/web3/faucet/ethereum/sepolia
 2. https://faucet.metana.io
@@ -59,7 +59,7 @@ npm shrinkwrap
 mousepad .env      # (You may use any text editor)
 ```
 
-**You will then see a file like this:**
+**C. You will see a file like this:**
 ```
 # .env file
 
@@ -74,7 +74,7 @@ PINATA_API_KEY=your_pinata_api_key
 PINATA_SECRET_API_KEY=your_pinata_secret_api_key
 IPFS_GATEWAY=https://your_pinata_user_name.mypinata.cloud/ipfs/
 ```
-Fill in all the values that begin with **your** in the .env file. For example:
+**D. Fill in all the values that begin with** *your* **in the .env file, for example:**
 ```
 # .env file
 
@@ -91,13 +91,13 @@ IPFS_GATEWAY=https://web3tester.mypinata.cloud/ipfs/
 
 ```
 
-**C. Run the following commands to set up the project after collecting at least 0.2 SepoliaETH in your MetaMask wallet:**
+**E. Run the following commands to set up the voters and fund them:**
 ```
 node generate-voters.js
 node fund-voters.js
 ```
 
-# Running the program
+# 5. Running the program
 **Run the command below to start the project:**
 ```
 npx hardhat run index.ts --network sepolia
