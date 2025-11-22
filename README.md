@@ -1,6 +1,7 @@
- by Goodwell Kamwendo
+# ORANK Project  
+by Goodwell Kamwendo
  
- # 1. Project Overview
+ # 1. Overview
 
 This is a blockchain-based governance ranking protocol built with Hardhat, Ethers.js, and TypeScript. It provides a foundation for DAOs to automate ranking, verify proposal outcomes, and maintain trustworthy governance records on the EVM chain. This ensures transparent proposal evaluation, verifiable voting, and on-chain accountability.
 
@@ -28,16 +29,19 @@ DAO governance often lacks verifiable ranking and transparent verification mecha
 ```
 sudo apt-get install nodejs npm
 ```
+
 2. *To install the project:*
 ```
 git clone https://github.com/GKamsy/orank.git
 ```
+
 3. *To install dependencies:*
 ```
 cd orank
 npm install --save-dev $(cat dev-dependencies.txt)
 npm install $(cat prod-dependencies.txt)
 ```
+
 4. *To compile the project code:*
 ```
 npx hardhat compile
@@ -50,10 +54,8 @@ npm shrinkwrap
 2. https://faucet.metana.io
 3. https://www.alchemy.com/faucets/ethereum-sepolia
 
-**B. Run the command below to set up the project:**
+**B. Run the command below to open the .env file:**
 ```
-node generate-voters.js
-node fund-voters.js
 mousepad .env      # (You may use any text editor)
 ```
 
@@ -72,13 +74,27 @@ PINATA_API_KEY=your_pinata_api_key
 PINATA_SECRET_API_KEY=your_pinata_secret_api_key
 IPFS_GATEWAY=https://your_pinata_user_name.mypinata.cloud/ipfs/
 ```
+Fill in all the values that begin with **your** in the .env file. For example:
+```
+# .env file
 
+DEV_MODE=true
+
+PUBLIC_KEY=0x50B4...8220ba
+PRIVATE_KEY=0x543dd7...c9d1213304
+SEPOLIA_URL=https://eth-sepolia.g.alchemy.com/v2/012345
+VOTER_KEYS=generated_for_testing
+
+PINATA_API_KEY=abcdef123456
+PINATA_SECRET_API_KEY=abcde12345fghijkl6789
+IPFS_GATEWAY=https://web3tester.mypinata.cloud/ipfs/
+
+```
 
 **C. Run the following commands to set up the project after collecting at least 0.2 SepoliaETH in your MetaMask wallet:**
 ```
 node generate-voters.js
 node fund-voters.js
-mousepad .env      # (You may use any text editor)
 ```
 
 # Running the program
