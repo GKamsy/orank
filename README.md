@@ -102,3 +102,6 @@ node fund-voters.js
 ```
 npx hardhat run index.ts --network sepolia
 ```
+
+# PART 6: Conlusion
+I can proudly confirm that this project can be easily integrated into the education and research systems. It fits all angles of top security with a little justification. I invite all those who are willing to help me improve my work.
