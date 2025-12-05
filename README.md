@@ -1,5 +1,5 @@
 # ORANK Project  
-by Goodwell Kamwendo
+  --- by Goodwell Kamwendo ---
  
  # PART 1: About
 
@@ -28,7 +28,7 @@ DAO governance often lacks verifiable ranking and transparent verification mecha
 2. https://faucet.metana.io
 3. https://www.alchemy.com/faucets/ethereum-sepolia
 
-**B. To install the project:**
+**B. Run the command below to download the project:**
 ```
 git clone https://github.com/GKamsy/orank.git
 ```
