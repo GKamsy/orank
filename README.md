@@ -22,34 +22,7 @@ DAO governance often lacks verifiable ranking and transparent verification mecha
 5. IPFS SECRET KEY: Your PINATA secret API key.
 6. IPFS GATEWAY: Your PINATA private gateway.
 
-
-# PART 3: Installation
-**Open your terminal/shell (Press Ctr + Alt + T) and run the following commands:**
-1. *To install  Node.js and npm:*
-```
-sudo apt-get install nodejs
-sudo apt-get install npm
-```
-
-2. *To install the project:*
-```
-git clone https://github.com/GKamsy/orank.git
-```
-
-3. *To install dependencies:*
-```
-cd orank
-npm install --save-dev $(cat dev-dependencies.txt)
-npm install $(cat prod-dependencies.txt)
-```
-
-4. *To compile the project code:*
-```
-npx hardhat compile
-npm shrinkwrap
-```
-
-# PART 4: Environmental Setup
+# PART 3: Environmental Setup
 **A. Use the following websites to claim faucets for testing (make sure to collect more than 0.2 SepoliaETH in your MetaMask wallet):**
 1. https://cloud.google.com/application/web3/faucet/ethereum/sepolia
 2. https://faucet.metana.io
@@ -92,14 +65,45 @@ IPFS_GATEWAY=https://web3tester.mypinata.cloud/ipfs/
 
 ```
 
-**E. Run the following commands to set up the voters and then fund them:**
+
+# PART 4: Installations
+**Open your terminal/shell (Press Ctr + Alt + T) and run the following commands:**
+1. *To install  Node.js and npm:*
 ```
-node generate-voters.js
-node fund-voters.js
+sudo apt-get install nodejs
+sudo apt-get install npm
+```
+
+2. *To install the project:*
+```
+git clone https://github.com/GKamsy/orank.git
+```
+
+3. *To install dependencies:*
+```
+cd orank
+npm install --save-dev $(cat dev-dependencies.txt)
+npm install $(cat prod-dependencies.txt)
+```
+
+4. *To compile the project code:*
+```
+npx hardhat compile
+npm shrinkwrap
 ```
 
 # PART 5: Running the program
-**Run the command below to start the project:**
+**A. Run the command below to generate the voters:**
+```
+node generate-voters.js
+```
+
+**B. Run the command below to fund the voters:**
+```
+node fund-voters.js
+```
+
+**C. Run the command below to fire up the project:**
 ```
 npx hardhat run index.ts --network sepolia
 ```
