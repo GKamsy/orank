@@ -1,0 +1,189 @@
+{
+  "sepolia": [
+    {
+      "id": 1,
+      "name": "AI Research Grant",
+      "proposalId": "87407674968789868631440830719488183303322847264859489450481233432611391112147",
+      "description": "Approve grant and release funds for AI Research Grant (1)",
+      "state": "Executed",
+      "targets": [
+        "0x60aab8de89098D47166825F3130543ce9c143524"
+      ],
+      "values": [
+        0
+      ],
+      "calldata": [
+        "0x9ac1df05d232baa40f006aa27d88900bb4435139dc42804463a94d275194c63bd468084900000000000000000000000050b498808ad35f27f0c401540f0cb86ea78220ba"
+      ],
+      "votes": {
+        "0x9915...938b": {
+          "choice": 1,
+          "feedback": "A very good proposal that will fit so many needs.",
+          "metadataCid": "QmNzABGGt3ndWCwQko3Yooh5wAPFCzxj6rA2qMEkVRH1om",
+          "signature": "0x6e565d4d5a1e3896b291fb7993bcceb1ec195902efdf5a58aebfe4e5bbb798e10de2e352afb82d9a89ad610a7a6b25a7d22b49b22ad331df50c83dc7f31c30e11c",
+          "txHash": "0xacc6282ccfda39252624629e6355724179ec97d1fab6d7db7a1120497a1f4768",
+          "verified": true,
+          "signer": "0x50B498808AD35f27f0c401540f0Cb86Ea78220ba",
+          "recovered": "0x50B498808AD35f27f0c401540f0Cb86Ea78220ba",
+          "verificationError": null,
+          "verifiedAt": "2025-12-05T02:31:27.733Z",
+          "verifiedBlock": 9771499,
+          "lastVerifiedCid": "QmNzABGGt3ndWCwQko3Yooh5wAPFCzxj6rA2qMEkVRH1om"
+        },
+        "0x6441...6425": {
+          "choice": 1,
+          "feedback": "No feedback",
+          "metadataCid": "QmcQcEEmiBkT6LTx2xUG7mbQyf4BgriT539zHeinW13bkN",
+          "signature": "0x846d84b4282ef575aaf4307d4ea071e6d540d580b8e786dcfb2b5e95c457ce1c079331704609115bdde1cc5a5250415cbce3139e90aef2a60feb76a5f36a115b1c",
+          "txHash": "0x698d4bf00c960f82eddaca6d02eeb27ca5889456bd081a7eb2df226f56c382d7",
+          "verified": true,
+          "signer": "0xC4ed25e3ce4e60C6fAdF41d4691241B69a78A26a",
+          "recovered": "0xC4ed25e3ce4e60C6fAdF41d4691241B69a78A26a",
+          "verificationError": null,
+          "verifiedAt": "2025-12-05T02:31:28.883Z",
+          "verifiedBlock": 9771499,
+          "lastVerifiedCid": "QmcQcEEmiBkT6LTx2xUG7mbQyf4BgriT539zHeinW13bkN"
+        },
+        "0x24e2...3817": {
+          "choice": 1,
+          "feedback": "No feedback",
+          "metadataCid": "QmRBcGpExKkFCDkdYGNodbYBzfUGmT7PnLszjsbGhYPA7h",
+          "signature": "0xe5235ac9f8f53e710094c0f2cae002b6adbdce4ffd8c9b6e107dead8873979cb4d7b2ff62bcb69ec798b482f1ee5fa29ef26d15e175d0d04d5abd13a68a1eb041b",
+          "txHash": "0x7485c081f10c4679d7c791bebac7c6b64ce47dc4441429551e8e2f0290b96f4b",
+          "verified": true,
+          "signer": "0x48E2e9B52A869569d700F1f5d2877Aa4017F419c",
+          "recovered": "0x48E2e9B52A869569d700F1f5d2877Aa4017F419c",
+          "verificationError": null,
+          "verifiedAt": "2025-12-05T02:31:30.069Z",
+          "verifiedBlock": 9771499,
+          "lastVerifiedCid": "QmRBcGpExKkFCDkdYGNodbYBzfUGmT7PnLszjsbGhYPA7h"
+        },
+        "0x543d...3304": {
+          "choice": 1,
+          "feedback": "No feedback",
+          "metadataCid": "QmRAGrNaBnGi51SEUQTkbRQApfyc4nBdbQ7ogvT6fuvspN",
+          "signature": "0x7d0d6c844274f97bfb86c069c17efa98085037d10b6b91b5352faabdbc76371e4fa0d47dee140dda143035a31ab439654b6f2503983cde4c8c086ed6d4ae84cb1c",
+          "txHash": "0x053840abc114c6503324e5c23a18347977cf3d63b4cd62cf364be82db2fbff2b",
+          "verified": true,
+          "signer": "0x45593b7e48F3018fCfC0c93B609F14aaF337054A",
+          "recovered": "0x45593b7e48F3018fCfC0c93B609F14aaF337054A",
+          "verificationError": null,
+          "verifiedAt": "2025-12-05T02:31:30.936Z",
+          "verifiedBlock": 9771499,
+          "lastVerifiedCid": "QmRAGrNaBnGi51SEUQTkbRQApfyc4nBdbQ7ogvT6fuvspN"
+        },
+        "0xc30e...28cd": {
+          "choice": 1,
+          "feedback": "No feedback",
+          "metadataCid": "QmW4feF6d43cQ3oUGrWDYww5Xn8dCPwc6YAdPAHMQKi1gX",
+          "signature": "0xfcf77807328b15168150eff3743f556d51da3974919d28334744f9db1d94f37a32435194b8b248d2f03ff1b03bffdbba1d27f4cd6b35a78d2b80fb72021dde751c",
+          "txHash": "0xa5af70da5b2d3bce56c8e599a7862956d65c7c33164e9c77d920022923cc2920",
+          "verified": true,
+          "signer": "0x66c811af325f3707045b204934ca6F29CA693Ef0",
+          "recovered": "0x66c811af325f3707045b204934ca6F29CA693Ef0",
+          "verificationError": null,
+          "verifiedAt": "2025-12-05T02:31:32.170Z",
+          "verifiedBlock": 9771499,
+          "lastVerifiedCid": "QmW4feF6d43cQ3oUGrWDYww5Xn8dCPwc6YAdPAHMQKi1gX"
+        },
+        "0x4cf6...275d": {
+          "choice": 1,
+          "feedback": "No feedback",
+          "metadataCid": "QmWhsvUbaKE72FyRAZxYxbwuw6cqYqEhfrNJCcnurVs45R",
+          "signature": "0xb436dba78e50038899543dc8a85413f2dd0ad3580e7b0fa10029911df54f365c1bee845f215c0b4e5712c38548247ad9d6bcee4856f6300406ea6156bda1b54e1b",
+          "txHash": "0xbb92b7f14a7986001a376638c4f99e18d981a77364ddb9cdcdef66c7f773848a",
+          "verified": true,
+          "signer": "0xFeAe92d1c365727499b23034b8614Bf02cee0037",
+          "recovered": "0xFeAe92d1c365727499b23034b8614Bf02cee0037",
+          "verificationError": null,
+          "verifiedAt": "2025-12-05T02:31:33.392Z",
+          "verifiedBlock": 9771499,
+          "lastVerifiedCid": "QmWhsvUbaKE72FyRAZxYxbwuw6cqYqEhfrNJCcnurVs45R"
+        }
+      },
+      "reviews": [
+        {
+          "reviewer": "0x9915...938b",
+          "rating": 4,
+          "feedback": "This is the best proposal ever! It will outnumber rthe rest.",
+          "ipfsHash": "QmSxnzQUrPTkjh9Gz86T72MNqzqbo76Nqhz4B96ybC9UNj",
+          "txHash": "0x04f9a92a6f636779cacfb4d9ab9b98073b230bfd9579cbfad646c661378ad662",
+          "timestamp": "2025-12-05T02:26:00.569Z",
+          "verified": true,
+          "signer": "0x50B498808AD35f27f0c401540f0Cb86Ea78220ba",
+          "recovered": "0x50B498808AD35f27f0c401540f0Cb86Ea78220ba",
+          "verificationError": null,
+          "verifiedAt": "2025-12-05T02:31:34.631Z",
+          "verifiedBlock": 9771499,
+          "lastVerifiedCid": "QmSxnzQUrPTkjh9Gz86T72MNqzqbo76Nqhz4B96ybC9UNj"
+        },
+        {
+          "reviewer": "0x6441...6425",
+          "rating": 5,
+          "feedback": "Expanding the frontier models at its best.",
+          "ipfsHash": "QmQR48ceM3TzTgV5W2C3NBRTbpoHzYpYHJLshmRDQohsRP",
+          "txHash": "0xfff06ed7a2e40d78a7f89d5e11e569977a818142f438720493f70b37fb936040",
+          "timestamp": "2025-12-05T02:27:23.094Z",
+          "verified": true,
+          "signer": "0xC4ed25e3ce4e60C6fAdF41d4691241B69a78A26a",
+          "recovered": "0xC4ed25e3ce4e60C6fAdF41d4691241B69a78A26a",
+          "verificationError": null,
+          "verifiedAt": "2025-12-05T02:31:35.871Z",
+          "verifiedBlock": 9771499,
+          "lastVerifiedCid": "QmQR48ceM3TzTgV5W2C3NBRTbpoHzYpYHJLshmRDQohsRP"
+        },
+        {
+          "reviewer": "0x24e2...3817",
+          "rating": 5,
+          "feedback": "Expanding the frontier models at its best.",
+          "ipfsHash": "QmerZFdy4dKt9sju57PhqGzKn8r31jAxRuAyyFWC7mPgUV",
+          "txHash": "0xcdd8972d4d1bb307aceea9ff2b3977568f110ec0da17903eeee296fd9d579a71",
+          "timestamp": "2025-12-05T02:27:47.464Z",
+          "verified": true,
+          "signer": "0x48E2e9B52A869569d700F1f5d2877Aa4017F419c",
+          "recovered": "0x48E2e9B52A869569d700F1f5d2877Aa4017F419c",
+          "verificationError": null,
+          "verifiedAt": "2025-12-05T02:31:37.080Z",
+          "verifiedBlock": 9771499,
+          "lastVerifiedCid": "QmerZFdy4dKt9sju57PhqGzKn8r31jAxRuAyyFWC7mPgUV"
+        }
+      ],
+      "stateHistory": [
+        {
+          "state": "Created",
+          "timestamp": "2025-12-05T02:07:50.498Z"
+        },
+        {
+          "state": "Active",
+          "updatedAt": "2025-12-05T02:14:47.610Z"
+        },
+        {
+          "state": "Succeeded",
+          "updatedAt": "2025-12-05T02:28:56.078Z"
+        },
+        {
+          "state": "Queued",
+          "updatedAt": "2025-12-05T02:31:47.696Z"
+        },
+        {
+          "state": "Executed",
+          "updatedAt": "2025-12-05T02:39:59.825Z"
+        }
+      ],
+      "averageScore": "4.67",
+      "analytics": {
+        "quorum": "40000000000000000000",
+        "forVotes": "6",
+        "againstVotes": "0",
+        "abstainVotes": "0",
+        "totalVotes": "6",
+        "majorityPassed": true,
+        "verifiedVotes": 6,
+        "totalVotesRecorded": 6,
+        "verifiedPercentage": "100.0%",
+        "lastCheckedBlock": 9771499,
+        "lastCheckedAt": "2025-12-05T02:31:39.339Z"
+      }
+    }
+  ]
+}
