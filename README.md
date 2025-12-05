@@ -28,12 +28,17 @@ DAO governance often lacks verifiable ranking and transparent verification mecha
 2. https://faucet.metana.io
 3. https://www.alchemy.com/faucets/ethereum-sepolia
 
-**B. Run the command below to open the .env file for editing:**
+**B. To install the project:**
+```
+git clone https://github.com/GKamsy/orank.git
+```
+
+**C. Run the command below to open the .env file for editing:**
 ```
 mousepad .env      # (You may use any text editor)
 ```
 
-**C. You will see a file like this:**
+**D. You will see a file like this:**
 ```
 # .env file
 
@@ -48,7 +53,7 @@ PINATA_API_KEY=your_pinata_api_key
 PINATA_SECRET_API_KEY=your_pinata_secret_api_key
 IPFS_GATEWAY=https://your_pinata_user_name.mypinata.cloud/ipfs/
 ```
-**D. Fill in all the values that begin with** *your* **in the .env file, for example:**
+**E. Fill in all the values that begin with** *your* **in the .env file, for example:**
 ```
 # .env file
 
@@ -74,19 +79,14 @@ sudo apt-get install nodejs
 sudo apt-get install npm
 ```
 
-2. *To install the project:*
-```
-git clone https://github.com/GKamsy/orank.git
-```
-
-3. *To install dependencies:*
+2. *To install dependencies:*
 ```
 cd orank
 npm install --save-dev $(cat dev-dependencies.txt)
 npm install $(cat prod-dependencies.txt)
 ```
 
-4. *To compile the project code:*
+3. *To compile the project code:*
 ```
 npx hardhat compile
 npm shrinkwrap
